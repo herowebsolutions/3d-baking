@@ -18,7 +18,7 @@ const BreadCat = ({ breads }) => {
           <h2 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
             {id}
           </h2>
-          <p className='mt-4 text-gray-500'>{content.breads.desc}</p>
+          <p className='mt-4 text-gray-500'>{content.work.desc}</p>
         </div>
         {/* when clicked on a category, have a hook that changes to tech of bread to pass it to the component as props */}
         <div className='grid grid-cols-1 grid-rows-2 gap-4 sm:gap-6 lg:gap-8'>
