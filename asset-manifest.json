@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/3d-baking/static/css/main.d8e2a5d2.css",
+    "main.js": "/3d-baking/static/js/main.e03bce3a.js",
+    "static/js/787.a0f78c7d.chunk.js": "/3d-baking/static/js/787.a0f78c7d.chunk.js",
+    "index.html": "/3d-baking/index.html",
+    "main.d8e2a5d2.css.map": "/3d-baking/static/css/main.d8e2a5d2.css.map",
+    "main.e03bce3a.js.map": "/3d-baking/static/js/main.e03bce3a.js.map",
+    "787.a0f78c7d.chunk.js.map": "/3d-baking/static/js/787.a0f78c7d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8e2a5d2.css",
+    "static/js/main.e03bce3a.js"
+  ]
+}
