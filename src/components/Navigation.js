@@ -4,6 +4,7 @@ import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/solid'
 import { Link, useNavigate } from 'react-router-dom'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import content from '../content'
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -20,7 +21,7 @@ export default function Navigation ({ categories }) {
   const navigate = useNavigate()
 
   return (
-    <Popover as='nav' className='bg-blue-200 shadow'>
+    <Popover as='nav' className='bg-blue-200 shadow font-face-garamond'>
       <div className='mx-auto px-2 sm:px-6 lg:px-8 bg-gray-100'>
         <div className='relative flex justify-between h-16'>
           <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
@@ -48,33 +49,39 @@ export default function Navigation ({ categories }) {
                     <Popover.Panel className='absolute z-10 w-screen transform -translate-x-2 mt-3 sm:px-0 lg:max-w-2xl'>
                       <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
                         <div className=' flex flex-col items-center py-6 text-center bg-gray-100'>
-                          <button
+                          <Popover.Button
+                            onClick={() => navigate('/')}
                             className=' text-gray-700 border-gray-500 my-4 px-1 pt-1 text-md font-medium uppercase focus:outline-none'
+                          >
+                            Home
+                          </Popover.Button>
+                          <Popover.Button
                             onClick={() => navigate('/breads')}
+                            className=' text-gray-700 border-gray-500 my-4 px-1 pt-1 text-md font-medium uppercase focus:outline-none'
                           >
                             Our Breads
-                          </button>
+                          </Popover.Button>
 
-                          <button
+                          <Popover.Button
                             className=' text-gray-700 border-gray-500 my-4 px-1 pt-1 text-md font-medium uppercase focus:outline-none'
                             onClick={() => navigate('/about')}
                           >
                             About Us
-                          </button>
-                          <button
+                          </Popover.Button>
+                          <Popover.Button
                             className=' text-gray-700 border-gray-500 my-4 px-1 pt-1 text-md font-medium uppercase focus:outline-none'
                             onClick={() => navigate('/services')}
                           >
                             Services
-                          </button>
-                          <button
+                          </Popover.Button>
+                          <Popover.Button
                             className=' text-gray-700 border-gray-500 my-4 px-1 pt-1 text-md font-medium uppercase focus:outline-none'
                             onClick={() => navigate('/contact')}
                           >
                             Contact Us
-                          </button>
+                          </Popover.Button>
                         </div>
-                        <div className='flex justify-around p-4 bg-blue-100 items center'>
+                        <div className='flex justify-around p-4 bg-gray-100 items center'>
                           <span>Sample text here</span>
                         </div>
                       </div>
@@ -86,18 +93,24 @@ export default function Navigation ({ categories }) {
           </div>
           <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
             <div className='flex-shrink-0 flex items-center'>
-              <button onClick={() => navigate('/')} className='focus:outline-none'>
+              <button
+                onClick={() => navigate('/')}
+                className='focus:outline-none'
+              >
                 <img
-                  className='block lg:hidden h-8 w-auto'
-                  src='https://ehrapy.readthedocs.io/en/latest/_static/placeholder.png'
-                  alt='Workflow'
+                  className='block lg:hidden h-20 w-auto'
+                  src={content.nav.mobileLogo}
+                  alt='3D Baking Mobile Logo'
                 />
               </button>
-              <button onClick={() => navigate('/')} className='focus:outline-none'>
+              <button
+                onClick={() => navigate('/')}
+                className='focus:outline-none'
+              >
                 <img
-                  className='hidden lg:block h-8 w-auto focus:outline-none ring-0'
-                  src='https://4m4you.com/wp-content/uploads/2020/06/logo-placeholder.png'
-                  alt='Workflow'
+                  className='hidden lg:block h-20 w-auto focus:outline-none ring-0'
+                  src={content.nav.logo}
+                  alt='3D Baking Logo'
                 />
               </button>
             </div>
@@ -141,21 +154,35 @@ export default function Navigation ({ categories }) {
                             <div className='flex justify-between text-left text-gray-700 text-sm font-medium pt-6 border-b-2 border-gray-300'>
                               Categories
                               <div>
-                                <button
+                                <Popover.Button
                                   className='text-gray-700 text-sm font-medium'
                                   onClick={() => navigate('/breads')}
                                 >
                                   View All
-                                </button>
+                                </Popover.Button>
                               </div>
                             </div>
-                            <div className='relative grid gap-2 bg-white text-center lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 mt-6'>
+                            <div className='relative grid gap-2 bg-white text-center lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 mt-6'>
                               {categories.map(bread => (
                                 <div
                                   key={bread.id}
-                                  className='flex-col text-gray-700 items-center justify-center transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none '
+                                  className='flex-col text-gray-700 items-center justify-center rounded-lg hover:bg-gray-50 focus:outline-none '
                                 >
-                                  <Link to={`/categories/${bread.name}`}>
+                                  <Popover.Button
+                                    onClick={() =>
+                                      navigate(`/categories/${bread.name}`)
+                                    }
+                                  >
+                                    <div className=' '>
+                                      <img
+                                        className='h-20 w-auto'
+                                        src={bread.img}
+                                        placeholder={content.nav.imgPlaceholder}
+                                        alt='bread'
+                                      ></img>
+                                    </div>
+                                  </Popover.Button>
+                                  {/* <Link to={`/categories/${bread.name}`}>
                                     <div className=' '>
                                       <img
                                         className='h-auto w-auto'
@@ -163,7 +190,7 @@ export default function Navigation ({ categories }) {
                                         alt='bread'
                                       ></img>
                                     </div>
-                                  </Link>
+                                  </Link> */}
                                   <div className=''>
                                     <p className='text-sm font-medium text-gray-900'>
                                       {bread.name}
@@ -174,51 +201,51 @@ export default function Navigation ({ categories }) {
                               ))}
                             </div>
                           </div>
-                          <div className='bg-blue-100 p-4'>
+                          <div className='bg-gray-100 p-4'>
                             <div className='text-left text-gray-700 text-sm font-medium pt-6 border-b-2 border-gray-300'>
                               Services
                             </div>
 
                             <div className='flex flex-col justify-between pt-6 items-center'>
                               <a
-                                href='##'
+                                href='/services'
                                 className='flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
                               >
                                 <span className='flex items-center'>
-                                  <span className='text-sm font-medium text-gray-900'>
-                                    Documentation
+                                  <span className='text-sm font-bold text-gray-900'>
+                                    Dock to Door
                                   </span>
                                 </span>
-                                <span className='block text-sm text-gray-600'>
-                                  Start integrating products and tools
+                                <span className='mt-4 block text-sm text-gray-600 max-w-sm'>
+                                  Our breads are prepared overnight and baked
+                                  every day. Every morning our trucks are loaded
+                                  with fresh bread delivering to some of the
+                                  finest hotels and restaurants in the
+                                  Chicagoland area. As bakers with a passion for
+                                  what we do, we are dedicated to bringing you
+                                  one-of-a-kind bread with the utmost quality
+                                  every day.
                                 </span>
                               </a>
                               <a
-                                href='##'
+                                href='/services'
                                 className='flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
                               >
                                 <span className='flex items-center'>
-                                  <span className='text-sm font-medium text-gray-900'>
-                                    Documentation
+                                  <span className='text-sm font-bold text-gray-900'>
+                                  Frozen Foodservice Program 
                                   </span>
                                 </span>
-                                <span className='block text-sm text-gray-600'>
-                                  Start integrating products and tools
+                                <span className='mt-4 block text-sm text-gray-600 max-w-sm'>
+                                  At 3D Baking, we
+                                  find ways to make artisan accessible. Through
+                                  our Frozen Foodservice program, we work with
+                                  you to offer a variety of our quality bread,
+                                  buns, and rolls nationwide. Most importantly,
+                                  we do it without sacrificing taste.
                                 </span>
                               </a>
-                              <a
-                                href='##'
-                                className='flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
-                              >
-                                <span className='flex items-center'>
-                                  <span className='text-sm font-medium text-gray-900'>
-                                    Documentation
-                                  </span>
-                                </span>
-                                <span className='block text-sm text-gray-600'>
-                                  Start integrating products and tools
-                                </span>
-                              </a>
+                             
                             </div>
                           </div>
                         </div>

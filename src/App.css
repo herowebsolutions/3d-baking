@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Garamond";
+    src: local("Garamond"),
+     url("./fonts/GaramondCondensedRegular.ttf") format("truetype");
+    
+    }
+    .font-face-garamond {
+      font-family: "Garamond";
+     }
+     @font-face {
+        font-family: "Apercu";
+        src: local("Apercu"),
+         url("./fonts/ApercuProRegular.otf") format("truetype");
+        
+        }
+        .font-face-apercu {
+          font-family: "Apercu";
+         }

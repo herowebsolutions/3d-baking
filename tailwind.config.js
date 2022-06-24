@@ -3,7 +3,41 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    colors: {
+      transparent: 'transparent',
+      black: '#000',
+      white: '#fff',
+      gray: {
+        100: '#f3f4f6',
+       200: '#e5e7eb',
+       300: '#d1d5db',
+       400: '#9ca3af',
+       500: '#6b7280',
+       600: '#4b5563',
+       700: '#374151',
+       800: '#1f2937',
+        900: '#111827',
+    },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    extend: {
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    }
   },
   plugins: [],
+}
 }
