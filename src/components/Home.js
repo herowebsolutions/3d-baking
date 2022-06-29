@@ -11,20 +11,24 @@ export default function Home () {
         }}
       >
         <div className=' p-8 max-w-7xl mx-auto py-auto sm:px-4 lg:px-8 gap-4 flex flex-col justify-center items-center md:flex-row md:w-10/12 md:justify-between lg:min-h-[620px] '>
-          <div className='px-4 w-full md:w-3/5 text-left'>
-            <h1 className='text-6xl items-center justify-center font-face-garamond'>
-              No additives. No GMO’s. Only the freshest ingredients.
+          <div className='px-4 w-full md:w-2/5 text-left'>
+            <h1 className='text-5xl font-face-garamond'>
+              No artificial flavors. No GMO’s. Only the freshest ingredients.
             </h1>
           </div>
-          <div className=' w-full sm:w-2/5  items-center'>
-            <img
-              src={content.header.img}
-              alt='header profile'
-              className='py-12'
-            ></img>
+          <div className=' lg:w-3/5 lg:px-24 items-center'>
+
+          <video className='rounded-t-full '
+            autoPlay
+            loop
+            muted
+            
+            >
+            <source src={content.nav.video} type='video/mp4'/>
+            </video>
           </div>
         </div>
-
+        
         {/* OUR BREAD */}
         <div className='relative bg-white overflow-hidden'>
           <div className='pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48'>

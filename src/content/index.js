@@ -3,6 +3,7 @@ const content = {
     logo: process.env.PUBLIC_URL + '/3DLogo.png',
     mobileLogo: process.env.PUBLIC_URL + '/3DLogo.png',
     imgPlaceholder: process.env.PUBLIC_URL + '/3DLogo.png',
+    video: process.env.PUBLIC_URL + '/assets/videos/3dPromo.mp4',
     links: [
       { text: 'Work', to: 'mywork' },
       { text: 'Contact', to: 'mycontact' },
