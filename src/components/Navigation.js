@@ -206,44 +206,42 @@ export default function Navigation ({ categories }) {
                               Services
                             </div>
 
-                            <div className='flex flex-col justify-between pt-6 items-center'>
-                              <a
+                            <div className='flex flex-col justify-between pt-4'>
+                            <a
                                 href='/services'
-                                className='flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
+                                className='px-2 py-2  text-center transition duration-150 ease-in-out rounded-md hover:bg-gray-200 '
                               >
-                                <span className='flex items-center'>
+                                
                                   <span className='text-sm font-bold text-gray-900'>
-                                    Dock to Door
+                                  Dock to Door 
                                   </span>
-                                </span>
-                                <span className='mt-4 block text-sm text-gray-600 max-w-sm'>
-                                  Our breads are prepared overnight and baked
-                                  every day. Every morning our trucks are loaded
-                                  with fresh bread delivering to some of the
-                                  finest hotels and restaurants in the
-                                  Chicagoland area. As bakers with a passion for
-                                  what we do, we are dedicated to bringing you
-                                  one-of-a-kind bread with the utmost quality
-                                  every day.
-                                </span>
-                              </a>
-                              <a
-                                href='/services'
-                                className='flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50'
-                              >
-                                <span className='flex items-center'>
-                                  <span className='text-sm font-bold text-gray-900'>
-                                  Frozen Foodservice Program 
-                                  </span>
-                                </span>
-                                <span className='mt-4 block text-sm text-gray-600 max-w-sm'>
+                                
+                                {/* <span className='mt-4 block text-sm text-gray-600 max-w-sm'>
                                   At 3D Baking, we
                                   find ways to make artisan accessible. Through
                                   our Frozen Foodservice program, we work with
                                   you to offer a variety of our quality bread,
                                   buns, and rolls nationwide. Most importantly,
                                   we do it without sacrificing taste.
-                                </span>
+                                </span> */}
+                              </a>
+                              <a
+                                href='/services'
+                                className='px-2 py-2  text-center transition duration-150 ease-in-out rounded-md hover:bg-gray-200 '
+                              >
+                                
+                                  <span className='text-sm font-bold text-gray-900'>
+                                  Frozen Food Service Program 
+                                  </span>
+                                
+                                {/* <span className='mt-4 block text-sm text-gray-600 max-w-sm'>
+                                  At 3D Baking, we
+                                  find ways to make artisan accessible. Through
+                                  our Frozen Foodservice program, we work with
+                                  you to offer a variety of our quality bread,
+                                  buns, and rolls nationwide. Most importantly,
+                                  we do it without sacrificing taste.
+                                </span> */}
                               </a>
                              
                             </div>
