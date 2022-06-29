@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/3d-baking/static/css/main.5b0f6c25.css",
-    "main.js": "/3d-baking/static/js/main.adc25619.js",
+    "main.js": "/3d-baking/static/js/main.272899c5.js",
     "static/js/787.a0f78c7d.chunk.js": "/3d-baking/static/js/787.a0f78c7d.chunk.js",
     "static/media/ApercuProRegular.otf": "/3d-baking/static/media/ApercuProRegular.c90f8890213c974793f9.otf",
     "static/media/GaramondCondensedRegular.ttf": "/3d-baking/static/media/GaramondCondensedRegular.36262fdda0437a86303a.ttf",
     "index.html": "/3d-baking/index.html",
     "main.5b0f6c25.css.map": "/3d-baking/static/css/main.5b0f6c25.css.map",
-    "main.adc25619.js.map": "/3d-baking/static/js/main.adc25619.js.map",
+    "main.272899c5.js.map": "/3d-baking/static/js/main.272899c5.js.map",
     "787.a0f78c7d.chunk.js.map": "/3d-baking/static/js/787.a0f78c7d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5b0f6c25.css",
-    "static/js/main.adc25619.js"
+    "static/js/main.272899c5.js"
   ]
 }
