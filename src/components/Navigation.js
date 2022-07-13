@@ -21,18 +21,21 @@ export default function Navigation ({ categories }) {
   const navigate = useNavigate()
 
   return (
-    <Popover as='nav' className='bg-blue-200 shadow font-face-garamond'>
-      <div className='mx-auto px-2 sm:px-6 lg:px-8 bg-gray-100'>
+    <Popover as='nav' className='font-face-garamond'
+    style={{
+      background: '#eee'
+    }}>
+      <div className='mx-auto px-2 sm:px-6 lg:px-8 '>
         <div className='relative flex justify-between h-16'>
           <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
             {/* Mobile menu button */}
-            <Popover className='relative'>
+            <Popover className='relative shadow-xl'>
               {({ open }) => (
                 <>
-                  <Popover.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-gray-500 hover:bg-gray-100 focus:outline-none '>
+                  <Popover.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-800  '>
                     <span className='sr-only'>Open main menu</span>
                     {open ? (
-                      <XIcon className='block h-6 w-6' aria-hidden='true' />
+                      <XIcon className='block h-6 w-6' aria-hidden='true' style={{background: '#DFB995'}} />
                     ) : (
                       <MenuIcon className='block h-6 w-6' aria-hidden='true' />
                     )}
@@ -48,7 +51,7 @@ export default function Navigation ({ categories }) {
                   >
                     <Popover.Panel className='absolute z-10 w-screen transform -translate-x-2 mt-3 sm:px-0 lg:max-w-2xl'>
                       <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
-                        <div className=' flex flex-col items-center py-6 text-center bg-gray-100'>
+                        <div className=' flex flex-col items-center py-6 text-center' style={{background: '#DFB995' }}>
                           <Popover.Button
                             onClick={() => navigate('/')}
                             className=' text-gray-700 border-gray-500 my-4 px-1 pt-1 text-md font-medium uppercase focus:outline-none'
@@ -75,13 +78,13 @@ export default function Navigation ({ categories }) {
                             Services
                           </Popover.Button>
                           <Popover.Button
-                            className=' text-gray-700 border-gray-500 my-4 px-1 pt-1 text-md font-medium uppercase focus:outline-none'
+                            className=' text-gray-700  my-4 px-1 pt-1 text-md font-medium uppercase focus:outline-none'
                             onClick={() => navigate('/contact')}
                           >
                             Contact Us
                           </Popover.Button>
                         </div>
-                        <div className='flex justify-around p-4 bg-gray-100 items center'>
+                        <div className='flex justify-around border-t border-gray-700 p-4 items center' style={{background: '#DFB995' }}>
                           <span>Sample text here</span>
                         </div>
                       </div>

@@ -10,8 +10,14 @@ const content = {
     ],
   },
   header: {
-    img: process.env.PUBLIC_URL + '/assets/vectors/sliced-bread.png',
+    img: process.env.PUBLIC_URL + '/assets/vectors/olive-oil.png',
     
+  },
+  ourBread: {
+    img: process.env.PUBLIC_URL + '/assets/vectors/baked-fresh.png',
+  },
+  about: {
+    img: process.env.PUBLIC_URL + '/assets/vectors/sliced-baguette.png',
   },
   work: {
     title: 'Projects',
