@@ -10,7 +10,7 @@ const content = {
     ],
   },
   header: {
-    headerImg: process.env.PUBLIC_URL + '/assets/vectors/header-vector.png',
+    headerImg: process.env.PUBLIC_URL + '/assets/vectors/sliced-baguette.png',
     img: process.env.PUBLIC_URL + '/assets/vectors/dock2door.png',
     deliveryImg: process.env.PUBLIC_URL + '/assets/vectors/frozen.png'
     
