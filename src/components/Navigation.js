@@ -23,7 +23,7 @@ export default function Navigation ({ categories }) {
   return (
     <Popover as='nav' className='font-face-garamond'
     style={{
-      background: '#eee'
+      background: '#DFB995'
     }}>
       <div className='mx-auto px-2 sm:px-6 lg:px-8 '>
         <div className='relative flex justify-between h-16'>

@@ -10,14 +10,56 @@ const content = {
     ],
   },
   header: {
-    img: process.env.PUBLIC_URL + '/assets/vectors/olive-oil.png',
+    headerImg: process.env.PUBLIC_URL + '/assets/vectors/header-vector.png',
+    img: process.env.PUBLIC_URL + '/assets/vectors/dock2door.png',
+    deliveryImg: process.env.PUBLIC_URL + '/assets/vectors/frozen.png'
     
   },
   ourBread: {
     img: process.env.PUBLIC_URL + '/assets/vectors/baked-fresh.png',
   },
   about: {
-    img: process.env.PUBLIC_URL + '/assets/vectors/sliced-baguette.png',
+    img: process.env.PUBLIC_URL + '/assets/vectors/baked-fresh.png',
+  },
+
+  partners: {
+    wholeFoods: {
+      name: 'Whole Foods',
+      img: process.env.PUBLIC_URL + '/assets/partners/whole-foods.png'
+    },
+    lettuce: {
+      name: 'Lettuce Entertain You',
+      img: process.env.PUBLIC_URL + '/assets/partners/lettuce.png'
+    },
+    boka: {
+      name: 'Boka Restaurant Group',
+      img: process.env.PUBLIC_URL + '/assets/partners/boka.png'
+    },
+    joes: {
+      name: 'Joes Seafood & Steak',
+      img: process.env.PUBLIC_URL + '/assets/partners/joes.png'
+    },
+    langham: {
+      name: 'Langham Hotels',
+      img: process.env.PUBLIC_URL + '/assets/partners/langham.png'
+    },
+    ritz: {
+      name: 'The Ritz-Carlton',
+      img: process.env.PUBLIC_URL + '/assets/partners/ritz.png'
+    },
+    rpm: {
+      name: 'RPM Seafood',
+      img: process.env.PUBLIC_URL + '/assets/partners/rpm.png'
+    },
+    waldorf: {
+      name: 'Waldorf Astoria',
+      img: process.env.PUBLIC_URL + '/assets/partners/waldorf.png'
+    },
+    avendra: {
+      name: 'Avendra',
+      img: process.env.PUBLIC_URL + '/assets/partners/avendra.png'
+    },
+   
   },
   work: {
     title: 'Projects',
