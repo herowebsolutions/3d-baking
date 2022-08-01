@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import content from '../content'
 import Partners from './Partners'
 export default function Home () {
+  const navigate = useNavigate()
   return (
     <>
       <div
@@ -11,7 +12,7 @@ export default function Home () {
           background: '#DFB995'
         }}
       >
-        <div className='pt-6 lg:p-4 max-w-5xl  mx-auto py-auto md:px-8 lg:px-8 lg:gap-4 sm:gap-6 md:gap-6 flex flex-col justify-around items-center md:flex-row md:w-11/12 md:min-h-screen md:justify-center lg:min-h-[620px] '>
+        <div className='pt-6 lg:p-4 max-w-7xl mx-auto py-auto md:px-8 lg:px-8 lg:gap-4 sm:gap-6 md:gap-6 flex flex-col justify-around items-center md:flex-row md:w-11/12 md:min-h-screen md:justify-center lg:min-h-[620px] '>
           <div className='px-2 sm:w-10/12 md:w-7/12 text-center lg:text-left'>
             <h1 className='text-5xl font-face-garamond tracking-wide '>
               No artificial flavors.
@@ -101,14 +102,14 @@ export default function Home () {
                   Chicagoland area.
                 </p>
                 <div className='py-4'>
-                <a
-                  href='/services'
+                <button
+                 onClick={() => navigate('/services')}
                   className=' text-center text-gray-600  transition duration-150 ease-in-out rounded-md hover:text-gray-700 '
                 >
                   <span className='lg:text-xs lg:hover:underline underline underline-offset-1'>
                     See details
                   </span>
-                </a>
+                </button>
               </div>
               </div>
             </div>
@@ -144,14 +145,14 @@ export default function Home () {
                   nationwide.
                 </p>
                 <div className='py-4'>
-                <a
-                  href='/services'
+                <button
+                 onClick={() => navigate('/services')}
                   className=' text-center text-gray-600 transition duration-150 ease-in-out rounded-md hover:text-gray-700 '
                 >
                   <span className='lg:text-xs lg:hover:underline underline underline-offset-1'>
                     See details
                   </span>
-                </a>
+                </button>
               </div>
               </div>
               
@@ -161,7 +162,7 @@ export default function Home () {
         <Partners />
         {/* OUR BREAD */}
         <div
-          className='min-h-screen p-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static flex flex-col justify-center items-center lg:m-10 rounded-t-2xl shadow-xl '
+          className='min-h-screen p-8  mx-auto px-4 sm:px-6 lg:px-8 sm:static flex flex-col justify-center items-center lg:m-10 rounded-t-2xl shadow-xl '
           style={{ background: '#fff' }}
         >
           {/* <div className=' pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48'> */}

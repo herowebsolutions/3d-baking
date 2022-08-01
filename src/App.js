@@ -41,7 +41,7 @@ const App = () => {
 
   return (
     <>
-      <Router basename='/3d-baking'>
+      <Router basename='/'>
         <Navigation categories={categories}/>
         <Routes>
           <Route path='/' element={<Home breads={breads}/>} />
