@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/3d-baking/static/css/main.6c372ef6.css",
-    "main.js": "/3d-baking/static/js/main.b89bb533.js",
+    "main.css": "/3d-baking/static/css/main.f2cce17b.css",
+    "main.js": "/3d-baking/static/js/main.7e5cfa8d.js",
     "static/js/787.8e4a10e7.chunk.js": "/3d-baking/static/js/787.8e4a10e7.chunk.js",
     "static/media/ApercuProRegular.otf": "/3d-baking/static/media/ApercuProRegular.c90f8890213c974793f9.otf",
     "static/media/GaramondCondensedRegular.ttf": "/3d-baking/static/media/GaramondCondensedRegular.36262fdda0437a86303a.ttf",
     "index.html": "/3d-baking/index.html",
-    "main.6c372ef6.css.map": "/3d-baking/static/css/main.6c372ef6.css.map",
-    "main.b89bb533.js.map": "/3d-baking/static/js/main.b89bb533.js.map",
+    "main.f2cce17b.css.map": "/3d-baking/static/css/main.f2cce17b.css.map",
+    "main.7e5cfa8d.js.map": "/3d-baking/static/js/main.7e5cfa8d.js.map",
     "787.8e4a10e7.chunk.js.map": "/3d-baking/static/js/787.8e4a10e7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c372ef6.css",
-    "static/js/main.b89bb533.js"
+    "static/css/main.f2cce17b.css",
+    "static/js/main.7e5cfa8d.js"
   ]
 }
