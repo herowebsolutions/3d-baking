@@ -41,7 +41,7 @@ const App = () => {
 
   return (
     <>
-      <Router basename='/'>
+      <Router>
         <Navigation categories={categories}/>
         <Routes>
           <Route path='/' element={<Home breads={breads}/>} />
@@ -52,7 +52,7 @@ const App = () => {
           <Route path='/categories/:id/*' element={<BreadCat breads={breads}/>} />
           <Route path='/bread-details/:id/*' element={<BreadDetails breads={breads} />} />
 
-          <Route path='*' element={<Home />} />
+          <Route path='/*' element={<Home />} />
 
         </Routes>
         {/* <Footer/> */}

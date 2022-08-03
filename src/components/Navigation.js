@@ -210,8 +210,8 @@ export default function Navigation ({ categories }) {
                             </div>
 
                             <div className='flex flex-col justify-between pt-4'>
-                            <a
-                                href='/services'
+                            <Popover.Button
+                                onClick={() => navigate ('/services')}
                                 className='px-2 py-2  text-center transition duration-150 ease-in-out rounded-md hover:bg-gray-200 '
                               >
                                 
@@ -227,9 +227,9 @@ export default function Navigation ({ categories }) {
                                   buns, and rolls nationwide. Most importantly,
                                   we do it without sacrificing taste.
                                 </span> */}
-                              </a>
-                              <a
-                                href='/services'
+                              </Popover.Button>
+                              <Popover.Button
+                                onClick={() => navigate('/services')}
                                 className='px-2 py-2  text-center transition duration-150 ease-in-out rounded-md hover:bg-gray-200 '
                               >
                                 
@@ -245,7 +245,7 @@ export default function Navigation ({ categories }) {
                                   buns, and rolls nationwide. Most importantly,
                                   we do it without sacrificing taste.
                                 </span> */}
-                              </a>
+                              </Popover.Button>
                              
                             </div>
                           </div>

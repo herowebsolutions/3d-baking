@@ -60,7 +60,7 @@ export default function Home () {
         </div>
         {/* Services */}
 
-        <div className='bg-white '>
+        <div className='' style={{backgroundColor: '#ffffff'}}>
           <h1 className='text-center pt-16 text-gray-800 tracking-wider'>
             DISCOVER ALL THE POSSIBILITIES
           </h1>
@@ -70,7 +70,7 @@ export default function Home () {
           </p>
 
           <div className='lg:grid grid-cols-2 gap-2 sm:gap-2 md:grid-cols-2 py-16 lg:justify-around items-center max-w-8xl px-2 '>
-            <div className='flex lg:py-10 py-6  lg:mx-10 shadow-lg rounded-sm p-2'>
+            <div className='flex lg:py-10 py-6 border-2 border-gray-100 lg:mx-10 shadow-lg rounded-sm p-2'>
               <div className='mr-2 flex-shrink-0 self-center'>
                 {/* <svg
                   className='h-24 w-24 border border-gray-300 bg-white text-gray-300'
@@ -113,22 +113,9 @@ export default function Home () {
               </div>
               </div>
             </div>
-            <div className='flex lg:py-10 py-6 bg-white  lg:mx-10 drop-shadow-xl shadow-lg rounded-sm lg:p-4 p-2'>
+            <div className='flex lg:py-10 py-6 bg-white border-2 border-gray-100 lg:mx-10 drop-shadow-xl shadow-lg rounded-sm lg:p-4 p-2'>
               <div className='mr-2 flex-shrink-0 self-center  '>
-                {/* <svg
-                  className='h-24 w-24 border border-gray-300 bg-white text-gray-300'
-                  preserveAspectRatio='none'
-                  stroke='currentColor'
-                  fill='none'
-                  viewBox='0 0 200 200'
-                  aria-hidden='true'
-                >
-                  <path
-                    vectorEffect='non-scaling-stroke'
-                    strokeWidth={1}
-                    d='M0 0l200 200M0 200L200 0'
-                  />
-                </svg> */}
+                
                 <img
                   src={content.header.img}
                   alt=''
