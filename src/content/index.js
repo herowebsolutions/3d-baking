@@ -11,6 +11,7 @@ const content = {
   },
   header: {
     headerImg: process.env.PUBLIC_URL + '/assets/vectors/sliced-baguette.png',
+    imgPlaceholder: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png',
     img: process.env.PUBLIC_URL + '/assets/vectors/dock2door.png',
     deliveryImg: process.env.PUBLIC_URL + '/assets/vectors/frozen.png'
     

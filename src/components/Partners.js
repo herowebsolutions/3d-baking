@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Marquee from 'react-fast-marquee'
 import content from '../content'
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 export default function Partners () {
+    useEffect(() => {
+        AOS.init()
+      }, [])
   return (
     <>
-      <div className=''>
+      <div className=''
+      data-aos='fade-zoom-in'
+      data-aos-easing='ease-in-sine'>
         <h1 className='text-center text-3xl lg:px-24 px-3 pt-16 text-gray-600'>
           Join hundreds of companies that trust 3d Baking 
         </h1>
@@ -13,7 +19,9 @@ export default function Partners () {
           gradient={false}
           speed={60}
           className='min-w-30 py-16'
+          
         >
+            
           <div className=' w-full aspect-w-16 aspect-h-7 rounded-lg mx-4'>
             <img src={content.partners.wholeFoods.img} alt={content.partners.wholeFoods.name} placeholder='' className='object-cover h-56 w-32  rounded-full' />
           </div>

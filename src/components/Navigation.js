@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/solid'
@@ -19,8 +19,13 @@ function classNames (...classes) {
 
 export default function Navigation ({ categories }) {
   const navigate = useNavigate()
+  const [animated, setAnimated] = useState(false)
+  useEffect(() => {
+    setAnimated(true)
+  }, [])
 
   return (
+    
     <Popover as='nav' className='font-face-garamond'
     style={{
       background: '#DFB995'

@@ -7,7 +7,7 @@ export default function Services () {
       <div
         className='font-face-garamond lg:min-h-[660px]'
         style={{
-          background: '#eee'
+          background: '#DFB995'
         }}
       >
         <div className='pt-16 p-8 max-w-7xl mx-auto py-auto sm:px-4 lg:px-8  '>

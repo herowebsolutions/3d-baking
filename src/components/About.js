@@ -8,7 +8,7 @@ export default function About() {
     <div
       className="min-h-screen flex items-center justify-center flex-col"
       style={{
-        background: '#eee',
+        background: '#DFB995',
       }}
     >
       <h1 className="text-5xl font-dosis font-bold mb-10">About</h1>
