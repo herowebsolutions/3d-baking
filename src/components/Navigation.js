@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/solid'
@@ -20,27 +20,35 @@ function classNames (...classes) {
 export default function Navigation ({ categories }) {
   const navigate = useNavigate()
   const [animated, setAnimated] = useState(false)
+
   useEffect(() => {
     setAnimated(true)
   }, [])
 
   return (
-    
-    <Popover as='nav' className='font-face-garamond'
-    style={{
-      background: '#DFB995'
-    }}>
-      <div className='mx-auto px-2 sm:px-6 lg:px-8 '>
+    <Popover
+      as='nav'
+      className='font-face-garamond'
+      style={{
+        background: '#DFB995'
+      }}
+    >
+      <div className='mx-auto px-2 md:px-2 lg:px-2 '>
         <div className='relative flex justify-between h-16'>
-          <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
+          <div className='absolute inset-y-0 left-0 flex items-center md:hidden'>
             {/* Mobile menu button */}
-            <Popover className='relative shadow-xl'>
+            <Popover className='relative '>
               {({ open }) => (
                 <>
-                  <Popover.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-800  '>
-                    <span className='sr-only'>Open main menu</span>
+                  <Popover.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-800 focus:outline-none '
+                 >
+                   <span className='sr-only'>Open main menu</span>
                     {open ? (
-                      <XIcon className='block h-6 w-6' aria-hidden='true' style={{background: '#DFB995'}} />
+                      <XIcon
+                        className='block h-6 w-6'
+                        aria-hidden='true'
+                        style={{ background: '#DFB995' }}
+                      />
                     ) : (
                       <MenuIcon className='block h-6 w-6' aria-hidden='true' />
                     )}
@@ -54,9 +62,12 @@ export default function Navigation ({ categories }) {
                     leaveFrom='opacity-100 translate-y-0'
                     leaveTo='opacity-0 translate-y-1'
                   >
-                    <Popover.Panel className='absolute z-10 w-screen transform -translate-x-2 mt-3 sm:px-0 lg:max-w-2xl'>
-                      <div className='overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5'>
-                        <div className=' flex flex-col items-center py-6 text-center' style={{background: '#DFB995' }}>
+                    <Popover.Panel className='absolute z-10 w-screen transform -translate-x-2 lg:transform lg:-translate-x-2 mt-3 sm:px-0 lg:max-w-2xl'>
+                      <div className='overflow-hidden rounded-lg shadow-lg'>
+                        <div
+                          className=' flex flex-col items-center py-6 text-center'
+                          style={{ background: '#DFB995' }}
+                        >
                           <Popover.Button
                             onClick={() => navigate('/')}
                             className=' text-gray-700 border-gray-500 my-4 px-1 pt-1 text-md font-medium uppercase focus:outline-none'
@@ -89,9 +100,7 @@ export default function Navigation ({ categories }) {
                             Contact Us
                           </Popover.Button>
                         </div>
-                        <div className='flex justify-around border-t border-gray-700 p-4 items center' style={{background: '#DFB995' }}>
-                          <span>Sample text here</span>
-                        </div>
+                        
                       </div>
                     </Popover.Panel>
                   </Transition>
@@ -99,37 +108,42 @@ export default function Navigation ({ categories }) {
               )}
             </Popover>
           </div>
-          <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
-            <div className='flex-shrink-0 flex items-center'>
-              <button
-                onClick={() => navigate('/')}
-                className='focus:outline-none'
-              >
-                <img
-                  className='block lg:hidden h-20 w-auto'
-                  src={content.nav.mobileLogo}
-                  alt='3D Baking Mobile Logo'
-                />
-              </button>
-              <button
-                onClick={() => navigate('/')}
-                className='focus:outline-none'
-              >
-                <img
-                  className='hidden lg:block h-20 w-auto focus:outline-none ring-0'
-                  src={content.nav.logo}
-                  alt='3D Baking Logo'
-                />
-              </button>
-            </div>
+          <div className='flex-1 flex items-center justify-center '>
+              <div className='flex-shrink-0 flex items-center'>
+                <button
+                  onClick={() => navigate('/')}
+                  className='focus:outline-none'
+                >
+                  <img
+                    className='block lg:hidden md:hidden h-20 w-auto'
+                    src={content.nav.mobileLogo}
+                    alt='3D Baking Mobile Logo'
+                  />
+                </button>
+                <button
+                  onClick={() => navigate('/')}
+                  className='focus:outline-none'
+                >
+                  <img
+                    className='hidden lg:block md:block h-20 w-auto focus:outline-none ring-0'
+                    src={content.nav.logo}
+                    alt='3D Baking Logo'
+                  />
+                </button>
+
+
+
+              </div>
+                
+             
             {/* Desktop */}
-            <div className='hidden sm:ml-6 sm:flex sm:space-x-8'>
+            <div className='hidden md:ml-6 md:flex justify-center md:items-stretch sm:space-x-8'>
               <Popover className='inline-flex'>
                 {({ open }) => (
                   <>
                     <Popover.Button
                       className='
-                text-gray-800 group inline-flex items-center pt-1 px-1 border-b-2 border-gray-800 text-sm font-medium ring-0 focus:outline-none uppercase'
+                text-gray-800 hover:border-gray-300 hover:text-gray-700 group inline-flex items-center pt-1 px-1  text-sm font-medium  focus:outline-none uppercase'
                     >
                       Our Breads
                       {open ? (
@@ -215,15 +229,14 @@ export default function Navigation ({ categories }) {
                             </div>
 
                             <div className='flex flex-col justify-between pt-4'>
-                            <Popover.Button
-                                onClick={() => navigate ('/services')}
+                              <Popover.Button
+                                onClick={() => navigate('/services')}
                                 className='px-2 py-2  text-center transition duration-150 ease-in-out rounded-md hover:bg-gray-200 '
                               >
-                                
-                                  <span className='text-sm font-bold text-gray-900'>
-                                  Dock to Door 
-                                  </span>
-                                
+                                <span className='text-sm font-bold text-gray-900'>
+                                  Dock to Door
+                                </span>
+
                                 {/* <span className='mt-4 block text-sm text-gray-600 max-w-sm'>
                                   At 3D Baking, we
                                   find ways to make artisan accessible. Through
@@ -237,11 +250,10 @@ export default function Navigation ({ categories }) {
                                 onClick={() => navigate('/services')}
                                 className='px-2 py-2  text-center transition duration-150 ease-in-out rounded-md hover:bg-gray-200 '
                               >
-                                
-                                  <span className='text-sm font-bold text-gray-900'>
-                                  Frozen Food Service Program 
-                                  </span>
-                                
+                                <span className='text-sm font-bold text-gray-900'>
+                                  Frozen Food Service Program
+                                </span>
+
                                 {/* <span className='mt-4 block text-sm text-gray-600 max-w-sm'>
                                   At 3D Baking, we
                                   find ways to make artisan accessible. Through
@@ -251,7 +263,6 @@ export default function Navigation ({ categories }) {
                                   we do it without sacrificing taste.
                                 </span> */}
                               </Popover.Button>
-                             
                             </div>
                           </div>
                         </div>
@@ -266,7 +277,7 @@ export default function Navigation ({ categories }) {
                 className={classNames(
                   navigation.current
                     ? 'bg-gray-900 text-white'
-                    : 'border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium uppercase focus:outline-none'
+                    : 'border-transparent text-gray-800 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium uppercase focus:outline-none'
                 )}
                 aria-current={navigation.current ? 'page' : undefined}
               >
@@ -274,27 +285,32 @@ export default function Navigation ({ categories }) {
               </button>
               <button
                 onClick={() => navigate('/services')}
-                className='border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium uppercase focus:outline-none'
+                className='border-transparent text-gray-800 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium uppercase focus:outline-none'
               >
                 Services
               </button>
 
               <button
                 onClick={() => navigate('/contact')}
-                className='border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium uppercase focus:outline-none'
+                className='border-transparent text-gray-800 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium uppercase focus:outline-none'
               >
                 Contact Us
               </button>
-            </div>
-          </div>
-          <div className='absolute inline-flex inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
             <button
               onClick={() => navigate('/order-online')}
-              className='text-gray-900 group items-center justify-center hover:text-gray-700 pt-1 text-sm font-medium ring-0 focus:outline-none uppercase'
+              className='text-gray-100 items-center justify-center hover:text-white text-sm focus:outline-none uppercase'
             >
-              Order Online
+              <p className='p-2 rounded-xl shadow-lg'
+              style={{background: '#1A1A1A'}}>
+                Order Online
+              </p>
+              
             </button>
+            </div>
           </div>
+          <div className='lg:hidden md:hidden absolute inline-flex inset-y-0 right-0 items-center  '>
+                  <button className='text-gray-900 group items-center justify-center p-2 hover:text-gray-700 text-sm font-medium ring-0 focus:outline-none uppercase'>Order Online</button>
+                </div>
         </div>
       </div>
     </Popover>

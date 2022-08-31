@@ -20,8 +20,8 @@ export default function Home () {
         }}
       >
         <div className='pt-10 lg:p-4 max-w-7xl mx-auto py-auto md:px-8 lg:px-8 lg:gap-4 sm:gap-6 md:gap-6 flex flex-col justify-around items-center md:flex-row md:w-11/12 md:min-h-screen md:justify-center lg:min-h-[620px] '>
-          <div className={`${animated ? '' : 'translate-y-5 opacity-0'} transform transition duration-1000 ease-in-out px-2 sm:w-10/12 md:w-7/12 text-center lg:text-left`}>
-            <h1 className='text-5xl font-face-garamond tracking-wide '>
+          <div className={`${animated ? '' : 'translate-y-5 opacity-0'} transform transition lg:py-48 duration-1000 ease-in-out w-10/12 md:w-7/12 lg:text-center text-center`}>
+            <h1 className='text-5xl lg:text-7xl font-face-garamond tracking-wide '>
               No artificial flavors.
               <br />
               No GMO’s.
@@ -32,12 +32,12 @@ export default function Home () {
           </div>
 
          
-          <div className={`${animated ? '' : 'translate-y-5 opacity-0'} transform transition duration-1000 ease-in-out sm:w-2/6 md:w-2/6 lg:w-3/6 translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg) `}>
+          <div className={`${animated ? '' : 'translate-y-5 opacity-0'} transform lg:p-9  transition duration-1000 ease-in-out md:w-2/6 lg:w-4/6 translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg) `}>
             <img
               src={content.header.headerImg}
               alt=''
               placeholder={content.header.imgPlaceholder}
-              className='brightness-125 drop-shadow-xl '
+              className='brightness-125 drop-shadow-xl'
             />
           </div>
         </div>
@@ -62,18 +62,18 @@ export default function Home () {
             that are as delicious as they are versatile.
           </p>
 
-          <div className='lg:grid grid-cols-2 gap-2 sm:gap-2 md:grid-cols-2 py-16 lg:justify-around items-center max-w-8xl px-2 '
+          <div className='lg:grid grid-cols-2 gap-2 md:grid-cols-2 py-16 lg:justify-around items-center max-w-full px-2 '
            data-aos='fade-zoom-in'
            data-aos-easing='ease-in-sine'
           >
-            <div className='flex lg:py-10 py-6 border-2 border-gray-100 lg:mx-10 shadow-lg rounded-sm p-2 bg-white'>
-              <div className='mr-2 flex-shrink-0 self-center'>
+            <div className='flex lg:py-10 py-6  lg:mx-10  rounded-sm p-2 border-b-2 border-gray-200 lg:border-none bg-white'>
+              <div className='mr-2 flex-shrink-0 self-center justify-center text-center items-center '>
                 
                 <img
                   src={content.header.deliveryImg}
                   alt=''
                   placeholder=''
-                  className='h-auto w-32'
+                  className='h-auto w-32 '
                 />
               </div>
 
@@ -96,8 +96,8 @@ export default function Home () {
               </div>
               </div>
             </div>
-            <div className='flex lg:py-10 py-6 bg-white border-2 border-gray-100 lg:mx-10 drop-shadow-xl shadow-lg rounded-sm lg:p-4 p-2'>
-              <div className='mr-2 flex-shrink-0 self-center  '>
+            <div className='flex lg:py-10 py-6 bg-white  lg:mx-10 rounded-sm  lg:p-4 p-2'>
+              <div className='mr-2 flex-shrink-0 self-center '>
                 
                 <img
                   src={content.header.img}
@@ -105,7 +105,7 @@ export default function Home () {
                   placeholder='https://via.placeholder.com/300/09f.png/fff
 
                   C/O https://placeholder.com/'
-                  className='h-auto w-32 bg-white'
+                  className='h-auto w-32'
                 />
               </div>
 
@@ -150,7 +150,7 @@ export default function Home () {
                 placeholder='https://via.placeholder.com/300/09f.png/fff
 
                 C/O https://placeholder.com/'
-                className='h-auto w-40 text-center '
+                className='h-auto w-32 text-center '
               />
             </div>
             <div
